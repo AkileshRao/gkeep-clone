@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html{
+    overflow: auto !important;
+}
+*{
+    outline: none;
+    font-family: "Inter" !important;
+}
+
+.animation-content{
+    z-index: 1000;
+}
+
+.box{
+    box-shadow: none !important;
+}
+
+.dark > .submit-button > .icon{
+    color: #1a1a1a !important;
+}
+
+.snackbar{
+    width: 90% !important;
+    margin: auto auto .5rem auto !important;
+    border-radius: 5px !important;
+    font-size: .6rem !important;
+}
+
+.snackbar > .text{
+font-size: .9rem !important;
+}
