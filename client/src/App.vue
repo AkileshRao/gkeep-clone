@@ -1,11 +1,17 @@
 <template>
   <div id="app" class="app" v-bind:class="{ dark: mode == 'dark' }">
-    <Main />
+    <div class="main">
+      <Navbar />
+      <AddNote />
+      <Notes />
+    </div>
   </div>
 </template>
 
 <script>
-import Main from "./components/Main.vue";
+import AddNote from "./components/AddNote";
+import Notes from "./components/Notes";
+import Navbar from "./components/Navbar";
 import { mapGetters } from "vuex";
 
 export default {
@@ -14,9 +20,7 @@ export default {
   mounted() {
     this.$store.dispatch("setNotes");
   },
-  components: {
-    Main,
-  },
+  components: { AddNote, Notes, Navbar },
 };
 </script>
 
@@ -29,6 +33,12 @@ export default {
   min-height: 100vh;
   transition: 0.2s all ease-in-out;
   background: #f0f0f0;
+}
+
+.app .main {
+  height: 100%;
+  width: 85%;
+  margin: auto;
 }
 
 .dark {
